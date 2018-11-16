@@ -6,7 +6,7 @@
 
     <groupId>org.filesys</groupId>
     <artifactId>jfileserver-alfresco-embed</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.1.0-SNAPSHOT</version>
 
     <name>${project.groupId}:${project.artifactId}</name>
     <description>Repackaging of the JFileServer Jar for use within the Alfresco Content Management System</description>
