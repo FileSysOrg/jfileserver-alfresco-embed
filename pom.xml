@@ -43,11 +43,32 @@
                 <version>3.1.1</version>
                 <executions>
                     <execution>
+
+                        <!-- Repack the classes Jar file -->
                         <phase>package</phase>
                         <goals>
                             <goal>shade</goal>
                         </goals>
                         <configuration>
+                            <filters>
+                                <filter>
+                                    <artifact>*:*</artifact>
+                                    <includes>
+                                        <include>org/filesys/**/*</include>
+                                    </includes>
+                                </filter>
+                            </filters>
+                        </configuration>
+                    </execution>
+
+                    <!-- Repack the sources Jar file -->
+                    <execution>
+                        <id>source-jar</id>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <createSourcesJar>true</createSourcesJar>
                             <filters>
                                 <filter>
                                     <artifact>*:*</artifact>
@@ -87,6 +108,10 @@
                         <goals>
                             <goal>jar</goal>
                         </goals>
+                        <configuration>
+                            <includeDependencySources>true</includeDependencySources>
+                            <excludePackageNames>org.springframework.*</excludePackageNames>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
