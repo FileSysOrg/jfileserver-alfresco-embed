@@ -4,7 +4,7 @@
 
     <groupId>org.filesys</groupId>
     <artifactId>jfileserver-alfresco-embed</artifactId>
-    <version>1.4.1</version>
+    <version>1.4.1-SNAPSHOT</version>
 
     <name>${project.groupId}:${project.artifactId}</name>
     <description>Repackaging of the JFileServer Jar for use within the Alfresco Content Management System</description>
@@ -154,16 +154,15 @@
                 </dependencies>
             </plugin>
 
-            <!-- Nexus staging -->
+            <!-- Maven Central Publish -->
             <plugin>
-                <groupId>org.sonatype.plugins</groupId>
-                <artifactId>nexus-staging-maven-plugin</artifactId>
-                <version>1.7.0</version>
+                <groupId>org.sonatype.central</groupId>
+                <artifactId>central-publishing-maven-plugin</artifactId>
+                <version>0.9.0</version>
                 <extensions>true</extensions>
                 <configuration>
-                    <serverId>ossrh</serverId>
-                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                    <publishingServerId>central</publishingServerId>
+                    <autoPublish>true</autoPublish>
                 </configuration>
             </plugin>
         </plugins>
