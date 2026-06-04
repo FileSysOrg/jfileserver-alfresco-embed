@@ -220,7 +220,7 @@
         <connection>scm:git:git@github.com:FileSysOrg/jfileserver-alfresco-embed.git</connection>
         <developerConnection>scm:git:git@github.com:FileSysOrg/jfileserver-alfresco-embed.git</developerConnection>
         <url>https://github.com/FileSysOrg/jfileserver</url>
-        <tag>jfileserver-alfresco-embed-1.3.14</tag>
+        <tag>jfileserver-alfresco-embed-1.4.1</tag>
     </scm>
 
     <distributionManagement>
